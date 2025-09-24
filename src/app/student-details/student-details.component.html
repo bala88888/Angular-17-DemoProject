@@ -1,0 +1,40 @@
+<div class="card mt-4 mx-auto" style="max-width: 400px;">
+    <div class="card-header bg-primary text-white">
+        Student Details
+    </div>
+    <div class="card-body">
+        <h5 class="card-title" style="color: red; font-weight: bold;">
+            {{ studentInfo.name }}
+        </h5>
+        <p class="card-text"><strong>Email:</strong> {{ studentInfo.email }}</p>
+        <p class="card-text"><strong>Course:</strong> {{ studentInfo.course }}</p>
+        <p class="card-text"><strong>ID:</strong> {{ studentInfo.id }}</p>
+        <div class="d-flex gap-2">
+            <button class="btn btn-info getBox" (click)="getDataInfo()">Check Other</button>
+            <button class="btn btn-info" (click)="getMoreData()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                More
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 box123" id="exampleModalLabel">Course-data</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{courseData}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

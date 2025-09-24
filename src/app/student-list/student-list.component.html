@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<br>
+
+@if (showLader) {
+<div class="spinner-border text-primary box" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+} @else {
+<div class="student-table-container">
+    <h2 class="hedingClass">Student List</h2>
+
+    <table class="student-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Action</th>
+                <th>Basic Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (student of students; track student.id) {
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.course }}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary" (click)="viewDetails(student.id)">View</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm mb-2 w-100">Delete</button><br>
+                    <button class="btn btn-warning btn-sm mb-2 w-100">Update</button><br>
+                    <button class="btn btn-success btn-sm w-100">Add User</button>
+                </td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}
+<app-suc-poup #popup ><app-suc-poup />
+

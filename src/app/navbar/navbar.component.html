@@ -1,0 +1,11 @@
+
+<nav class="navbar">
+  <div class="logo">Student Management</div>
+  <ul class="nav-links">
+    <li><a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Login</a></li>
+    <li><a routerLink="/students" routerLinkActive="active">Students</a></li>
+      <li><a routerLink="/student-details" routerLinkActive="active"></a></li>
+  </ul>
+  <button class="logout-btn" (click)="logout()">Logout</button>
+</nav>
+
