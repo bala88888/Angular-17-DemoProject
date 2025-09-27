@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h2>Dynamic Survey Questions</h2>
+
+  <button (click)="loadTextQuestion()">Load Text Question</button>
+  <button (click)="loadMultipleChoice()">Load Multiple Choice</button>
+  <button (click)="loadDropdown()">Load Dropdown</button>
+
+  <hr />
+
+  <!-- This is where the dynamic components will be injected -->
+  <ng-container #surveyContainer></ng-container>
+
+</div>
+

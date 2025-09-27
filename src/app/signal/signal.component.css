@@ -1,0 +1,67 @@
+
+.shopping-cart {
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+thead {
+  background-color: #065f5f;
+  color: #fff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+input[type="number"], input[type="text"] {
+  width: 60px;
+  padding: 5px;
+}
+
+.summary {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.coupon-section {
+  margin-top: 1rem;
+}
+
+.coupon-section input {
+  width: 200px;
+  padding: 6px;
+  margin-right: 8px;
+}
+
+button {
+  background-color: #065f5f;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.proceed-button {
+  margin-top: 1rem;
+  float: right;
+}

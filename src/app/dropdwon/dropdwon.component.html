@@ -1,0 +1,12 @@
+<div class="question">
+  <label>{{ question }}</label><br />
+
+  <select [(ngModel)]="selectedOption">
+    <option value="" disabled selected>Select an option</option>
+
+    @for (option of options; track option) {
+      <option [value]="option">{{ option }}</option>
+    }
+  </select>
+</div>
+
