@@ -1,0 +1,17 @@
+  <p>The value from parent is {{ data.value }}</p>
+    <p>{{ whenComponentRerendered() }}</p>
+    <button (click)="changeValue()">Change button from child component</button>
+
+    <div class="card">
+      <header>
+    <ng-content select="[card-title]"></ng-content>
+  </header>
+
+  <section>
+    <ng-content></ng-content> <!-- default slot -->
+  </section>
+
+  <footer>
+    <ng-content select="[card-footer]"></ng-content>
+  </footer>
+    </div>
